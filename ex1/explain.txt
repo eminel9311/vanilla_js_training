@@ -1,0 +1,3 @@
+1. Yêu cầu viết function javascript cho phép user click vào Show password sẽ hiển thị mật khẩu.
+2. Viết trực tiếp js vào file index hoặc tách riêng file js,
+3. Không sử dụng bất cứ framework nào, sử dụng javascript thuần
