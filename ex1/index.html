@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script lang="javascript"  src="bai1.js"></script>
+    <title>Documentttttttt</title>
 </head>
 
 <body>
@@ -29,7 +30,7 @@
 
         <div>
             <label for="show-password">
-				<input type="checkbox" name="show-passwords" id="show-password" data-pw-toggle="#password">
+				<input type="checkbox" name="show-passwords" id="show-password" data-pw-toggle="#password" onclick="myFunction1();">
 				Show password
 			</label>
         </div>
@@ -56,7 +57,7 @@
 
         <div>
             <label for="show-passwords">
-				<input type="checkbox" name="show-passwords" id="show-passwords" data-pw-toggle="#current-password, #new-password">
+				<input type="checkbox" name="show-passwords" id="show-passwords" data-pw-toggle="#current-password, #new-password" onclick="myFunction2();">
 				Show passwords
 			</label>
         </div>
@@ -66,5 +67,44 @@
         </p>
     </form>
 </body>
+<script type="text/javascript">
+   function myFunction1()
+    {
+        var x = document.getElementById("password");
+        
+        if(x.type === "password")
+        {
+            x.type ="text";
+        }
+        else
+        {
+            x.type ="password";
+        }
+    }
+
+    function myFunction2()
+    {
+        var y = document.getElementById("current-password");
+        var z = document.getElementById("new-password");
+        
+        if(y.type === "password" && z.type === "password")
+        {
+            y.type ="text";
+            z.type ="text";
+        }
+        else
+        {
+            y.type ="password";
+            z.type ="password";
+        }
+    }
+    
+
+  /* document.addEventListener('click', function(myFunction){
+
+
+   });
+   */
+</script>
 
 </html>
