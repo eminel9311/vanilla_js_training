@@ -1,0 +1,2 @@
+1. Viết hàm bằng javascript thuần để gọi api sau https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=658cf0e4f41d48a29fd424f03ea549e8 để lấy tất cả các bài báo.Các bài báo sẽ được phân thành các category khác nhau.
+2. Viết code hiển thị các bài báo theo từng category.(chỉ sử dụng js).Giao diện mẫu xem trang index.html
