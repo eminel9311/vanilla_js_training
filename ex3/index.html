@@ -20,7 +20,49 @@
     </p>
 
 
+    <script>
+        // Get the blockquote and button elements
+        var quote = document.querySelector('#quote');
+        var btn = document.querySelector('#get-quote');
 
+        // Create an array to hold used quotes
+        var quotes = [];
+
+        // Get a fresh quote and render it into the DOM
+        var getQuote = function() {
+            // Get a Ron Swanson quote
+            fetch('https://ron-swanson-quotes.herokuapp.com/v2/quotes').then(function(response) {
+                return response.json();
+            }).then(function(data) {
+
+                // If the quote is in the quotes array, it's been used already in the last 50 clicks
+                // Recursively call getQuote() to fetch another quote instead
+                // Then return to quit the function
+                // if (quotes.indexOf(data[0]) > -1) {
+                //     getQuote();
+                //     return;
+                // }
+
+                // Otherwise, show the quote and add it to the quotes array
+                quote.textContent = data[0];
+                // quotes.push(data[0]);
+
+                // // If there are 50 items in the quotes array, reset it
+                // if (quotes.length > 50) {
+                //     quotes = [];
+                // }
+
+            }).catch(function(error) {
+                quote.textContent = '[Something went wrong, sorry!] I have a joke for you... The government in this town is excellent, and uses your tax dollars efficiently.';
+            });
+        };
+
+        // Get a quote on page load
+        getQuote();
+
+        // Get a quote when the #get-quote button is clicked
+        btn.addEventListener('click', getQuote, false);
+    </script>
 </body>
 
 </html>
